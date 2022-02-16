@@ -4,13 +4,13 @@
 #include <string.h> 
 using namespace std; 
 
-//Nota: En mi código he utilizado la Notación Húngara + Camel Case.
+//Nota: En mi cÃ³digo he utilizado la NotaciÃ³n HÃºngara + Camel Case.
 
 int main() {
-	//Permite imprimir tildes, ñ o caracteres especiales. 
+	//Permite imprimir tildes, Ã± o caracteres especiales. 
 	setlocale(LC_ALL, "");
 	
-	//Definición de variables.
+	//DefiniciÃ³n de variables.
 	string lcOpcion;
 	float lnNumero1, lnNumero2, lnResultado, lnSaldo, lnValor, lnSaldoInicial, lnIngresos, lnEgresos;
 	int lnCanIng, lnCanEgr;
@@ -24,18 +24,19 @@ int main() {
 	lnSaldo = lnSaldoInicial;
 	lnValor = 0;
 	
-	//Inicio del ciclo do-while (se repite hasta que el usuario presioné "S" para salir).
+	//Inicio del ciclo do-while (se repite hasta que el usuario presionÃ© "S" para salir).
 	do{
-		//Mostrando en pantalla el saldo actual + captura y lectura (opción a realizar).
-		cout << " ¿Qué desea hacer?" << endl << endl; 
+		//Mostrando en pantalla la (opciÃ³n a realizar) + Captura y Lectura de datos.
+		cout << " Â¿QuÃ© desea hacer?" << endl << endl; 
 		cout << " S = Sumar, R = Restar, M = Multiplicar, D = Dividir, F = Facturar, P = Pagar, Z = Salir" << endl << endl;
-		cout << " Escoga una opción: ";
+		cout << " Escoga una opciÃ³n: ";
 		cin >> lcOpcion;
 		
+		//Conjunto de condiciones para determinar (opciÃ³n de usuario) + Operaciones correspondientes.
 		if (lcOpcion == "S"){
-			cout << " Ingrese el primer número: ";
+			cout << " Ingrese el primer nÃºmero: ";
 			cin >> lnNumero1;
-			cout << " Ingrese el segundo número: ";
+			cout << " Ingrese el segundo nÃºmero: ";
 			cin >> lnNumero2;
 			
 			lnResultado = (lnNumero1 + lnNumero2);
@@ -43,9 +44,9 @@ int main() {
 			cout << " El resultado de " << lnNumero1 << " + " << lnNumero2 << " = " << lnResultado << endl << endl;
 		}
 		else if (lcOpcion == "R"){
-			cout << " Ingrese el primer número: ";
+			cout << " Ingrese el primer nÃºmero: ";
 			cin >> lnNumero1;
-			cout << " Ingrese el segundo número: ";
+			cout << " Ingrese el segundo nÃºmero: ";
 			cin >> lnNumero2;
 			
 			lnResultado = (lnNumero1 - lnNumero2);
@@ -53,9 +54,9 @@ int main() {
 			cout << " El resultado de " << lnNumero1 << " - " << lnNumero2 << " = " << lnResultado << endl << endl;
 		}
 		else if (lcOpcion == "M"){
-			cout << " Ingrese el primer número: ";
+			cout << " Ingrese el primer nÃºmero: ";
 			cin >> lnNumero1;
-			cout << " Ingrese el segundo número: ";
+			cout << " Ingrese el segundo nÃºmero: ";
 			cin >> lnNumero2;
 			
 			lnResultado = (lnNumero1 * lnNumero2);
@@ -63,9 +64,9 @@ int main() {
 			cout << " El resultado de " << lnNumero1 << " * " << lnNumero2 << " = " << lnResultado << endl << endl;
 		}	
 		else if (lcOpcion == "D"){
-			cout << " Ingrese el primer número: ";
+			cout << " Ingrese el primer nÃºmero: ";
 			cin >> lnNumero1;
-			cout << " Ingrese el segundo número: ";
+			cout << " Ingrese el segundo nÃºmero: ";
 			cin >> lnNumero2;
 			
 			lnResultado = (lnNumero1 / lnNumero2);
@@ -96,7 +97,7 @@ int main() {
 			cout << " Ingrese la cantidad: USD "; 
 			cin >> lnValor;
 					
-			//Condición (evitando que se proceda si el monto es < saldo actual).
+			//CondiciÃ³n (evitando que se proceda si el monto es < saldo actual).
 			if (lnValor > lnSaldo){
 				cout << " Su saldo es insuficiente";
 				cout << endl;
@@ -113,13 +114,13 @@ int main() {
 		cout << "----------------------------------------------------------------------------------------------------------" << endl;
 	} while (lcOpcion == "S" || lcOpcion == "R" || lcOpcion == "M" || lcOpcion == "D" || lcOpcion == "F" || lcOpcion == "P");
  
-	//Título. 
+	//TÃ­tulo. 
 	cout << endl << endl;
 	cout << "===================" << endl;
-	cout << " ¡Resumen del Día!" << endl;
+	cout << " Â¡Resumen del DÃ­a!" << endl;
 	cout << "===================" << endl << endl; 
 		
-	//Impresión de datos.
+	//ImpresiÃ³n de datos.
 	cout << " Saldo inicial: USD " << lnSaldoInicial << endl;
 	cout << " (+) " << lnCanIng << " Facturas por USD " << lnIngresos << endl;
 	cout << " (-) " << lnCanEgr << " Pagos por USD " << lnEgresos << endl;
