@@ -44,12 +44,13 @@ int main() {
 			
 			//Inicio del ciclo do-while (se repite hasta que el usuario presioné "S" para salir).
 			do{
-				//Mostrando en pantalla el saldo actual + captura y lectura (opción a realizar).
+				//Mostrando en pantalla (opción a realizar) + Captura y Lectura de datos.
 				cout << " ¿Qué desea hacer?" << endl << endl; 
 				cout << " S = Sumar, R = Restar, M = Multiplicar, D = Dividir, F = Facturar, P = Pagar, Z = Salir" << endl << endl;
 				cout << " Escoga una opción: ";
 				cin >> lcOpcion;
 				
+				//Condiciones en conjunto para determinar (operación a realizar según la opción elegida) + Operaciones correspondientes.
 				if (lcOpcion == "S"){
 					cout << " Ingrese el primer número: ";
 					cin >> lnNumero1;
@@ -153,7 +154,7 @@ int main() {
 			
 			//Condición (mensaje de seguridad cuando la n intentos finaliza).
 			if (lnCount == 0){
-				cout << "Por seguridad la sesión ha sido finalizada.";
+				cout << "Por seguridad la sesión ha sido finalizada...";
 			}
 		}
 	} while (lnCount > 0);
